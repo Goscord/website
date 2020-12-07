@@ -1,0 +1,38 @@
+body {
+    background-color: #23272A;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    h1 {
+        color: white;
+        font-size: 5.5em;
+    
+        margin: 0;
+    }
+    
+    img {
+        height: 125px;
+        width: auto;
+    }
+
+    &:hover {
+        h1 {
+            transition: all 1s;
+
+            font-size: 6em;
+        }
+
+        img {
+            transition: all 1s;
+
+            height: 150px;
+        }
+    }
+}
