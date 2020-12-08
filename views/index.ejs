@@ -14,9 +14,19 @@
     <link rel="stylesheet" href="/css/pages/index.css">
 </head>
 <body>
-    <div class="logo">
-        <img src="/images/logo.png" alt="logo">
-        <h1><a href="https://github.com/Goscord" target="_blank">GOSCORD</a></h1>
-    </div>
+    <header>
+        <h1>GOSCORD</h1>
+
+        <div class="buttons">
+            <p><a href="https://github.com/Goscord" target="_blank">GitHub</a></p>
+            <p id="module">go get github.com/Goscord/goscord</p>
+        </div>
+
+        <ul>
+            <% for(let i = 0; i < 40; i++){ %>
+                <li></li>
+            <% } %>
+        </ul>
+    </header>
 </body>
 </html>

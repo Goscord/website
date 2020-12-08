@@ -1,38 +1,131 @@
-body {
-    background-color: #23272A;
+@import "../import/color.scss";
+@import "../import/function.scss";
+@import "../import/mixin.scss";
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+    display: grid;
+
+    grid-template-rows: 100vh auto;
 }
 
-.logo {
+header {
+    grid-row: 1;
+
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color: #4e54c8; 
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+
+    // Background animation :
+
+    ul {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        overflow: hidden;
+
+        pointer-events: none;
+
+        li {
+            position: absolute;
+
+            display: block;
+
+            list-style: none;
+
+            background: rgba(255, 255, 255, 15%);
+
+            border-radius: 200px;
+
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+
+            @for $i from 1 through 40 {
+                &:nth-child(#{$i}) {
+                    left: percentage(random(100) / 100);
+
+                    $size: #{randomNumber(20, 150)}px;
+                    
+                    height: $size;
+                    width: $size;
+
+                    animation-delay: #{randomNumber(0, 15)}s;
+                    animation-duration: #{randomNumber(10, 50)}s;
+
+                    @if $i <= 20 {
+                        top: -150px;
+
+                        animation-name: movementDown;
+                    } @else {
+                        bottom: -150px;
+
+                        animation-name: movementUp;
+                    }
+                }
+            }
+
+            @include movementAnimation(movementUp, -1000px);
+            @include movementAnimation(movementDown, 1000px);
+        }
+    }
+
+    // Text and buttons :
 
     h1 {
         color: white;
-        font-size: 5.5em;
-    
+
+        font-size: 10em;
+        letter-spacing: 5px;
+
         margin: 0;
+
+        @include shadow(30%);
     }
+
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+        width: 650px;
+
+        p {
+            background-color: white;
     
-    img {
-        height: 125px;
-        width: auto;
-    }
-
-    &:hover {
-        h1 {
-            transition: all 1s;
-
-            font-size: 6em;
+            border-radius: 10px;
+    
+            font-size: 1.5em;
+            color: rgba(0, 0, 0, 75%);
+    
+            padding: 10px 20px;
+            margin: 0;
+    
+            @include shadow(30%);
         }
 
-        img {
-            transition: all 1s;
+        a {
+            color: rgba(0, 0, 0, 75%);
+        }
 
-            height: 150px;
+        a:hover {
+            color: $color-blue-flash;
+        }
+    
+        #module::before {
+            content: "> ";
+            color: $color-blue-flash;
         }
     }
 }
