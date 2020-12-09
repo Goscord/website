@@ -16,12 +16,9 @@ header {
     justify-content: center;
     flex-direction: column;
 
-    background-color: #4e54c8; 
-    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+    background-color: $color-dark;
 
-    // Background animation :
-
-    ul {
+    @mixin list-container {
         position: absolute;
 
         top: 0;
@@ -36,6 +33,12 @@ header {
         overflow: hidden;
 
         pointer-events: none;
+    }
+
+    // Background animation :
+
+    .bubbles {
+        @include list-container();
 
         li {
             position: absolute;
@@ -44,18 +47,19 @@ header {
 
             list-style: none;
 
-            background: rgba(255, 255, 255, 15%);
-
-            border-radius: 200px;
+            border-radius: 25px;
 
             animation-timing-function: linear;
             animation-iteration-count: infinite;
 
-            @for $i from 1 through 40 {
+            @for $i from 1 through 50 {
                 &:nth-child(#{$i}) {
-                    left: percentage(random(100) / 100);
+                    $left: random(100);
 
-                    $size: #{randomNumber(20, 150)}px;
+                    left: percentage($left / 100);
+
+                    $maxSize: 100;
+                    $size: #{randomNumber(20, $maxSize)}px;
                     
                     height: $size;
                     width: $size;
@@ -63,20 +67,68 @@ header {
                     animation-delay: #{randomNumber(0, 15)}s;
                     animation-duration: #{randomNumber(10, 50)}s;
 
-                    @if $i <= 20 {
-                        top: -150px;
+                    background: rgba($color-green, 50% + percentage(random(40%) / 100));
 
-                        animation-name: movementDown;
+                    @if $i <= 25 {
+                        top: -#{$maxSize}px;
+
+                        @if $left < 50 {
+                            animation-name: movementDownLeft;
+                        } @else {
+                            animation-name: movementDownRight;
+                        }
                     } @else {
-                        bottom: -150px;
+                        bottom: -#{$maxSize}px;
 
-                        animation-name: movementUp;
+                        @if $left < 50 {
+                            animation-name: movementUpLeft;
+                        } @else {
+                            animation-name: movementUpRight;
+                        }
                     }
                 }
             }
 
-            @include movementAnimation(movementUp, -1000px);
-            @include movementAnimation(movementDown, 1000px);
+            @include movementAnimation(movementUpLeft, -1000px, -600px);
+            @include movementAnimation(movementUpRight, -1000px, 600px);
+
+            @include movementAnimation(movementDownLeft, 1000px, -600px);
+            @include movementAnimation(movementDownRight, 1000px, 600px);
+        }
+    }
+
+    // Corners :
+
+    .corners {
+        @include list-container();
+
+        display: none;
+
+        img {
+            position: absolute;
+
+            height: 30vh;
+            width: auto;
+
+            @for $i from 1 through 4 {
+                &:nth-child(#{$i}){
+                    transform: rotate(90deg + ($i - 1) * 90deg);
+
+                    @if $i == 1 {
+                        top: 0;
+                        left: 0;
+                    } @else if $i == 2 {
+                        top: 0;
+                        right: 0;
+                    } @else if $i == 3 {
+                        bottom: 0;
+                        right: 0;
+                    } @else if $i == 4 {
+                        bottom: 0;
+                        left: 0;
+                    }
+                }
+            }
         }
     }
 

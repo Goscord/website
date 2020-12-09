@@ -19,14 +19,32 @@
     <header>
         <h1>GOSCORD</h1>
 
+        <h2 id="description">The best Discord API in Go.</h2>
+
         <div class="buttons">
-            <p><a href="https://github.com/Goscord" target="_blank">GitHub</a></p>
-            <p id="module">go get github.com/Goscord/goscord</p>
+            <p class="button"><a href="https://github.com/Goscord" target="_blank">GitHub</a></p>
+            <p class="button"><a href="https://discord.gg/todo" target="_blank">Join our Discord</a></p>
+        
+            <p class="button" onclick="copyText(this)"><img class="copy-image" src="/images/UI/copy.svg" alt="copy">go get github.com/Goscord/goscord</p>
+        </div>
+        
+        <!-- Scroll mouse UI -->
+        <div class="scroll-mouse">
+            <img src="/images/UI/mouse.svg" alt="scroll mouse">
+            <p>Scroll to see more</p>
         </div>
 
-        <ul>
-            <% for(let i = 0; i < 40; i++){ %>
+        <!-- Bubble for animation -->
+        <ul class="bubbles">
+            <% for(let i = 0; i < 50; i++){ %>
                 <li></li>
+            <% } %>
+        </ul>
+
+        <!-- Corners -->
+        <div class="corners">
+            <% for(let i = 0; i < 4; i++){ %>
+                <img src="/images/elements/corner.svg" alt="corner">
             <% } %>
         </ul>
     </header>
