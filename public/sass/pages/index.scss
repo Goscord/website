@@ -401,7 +401,51 @@ header {
     background-color: $color-green-pastel;
 }
 
-        text-align: center;
-        font-size: 1.3em;
+// Button style and color transition :
+
+.button {
+    background-color: white;
+
+    border-radius: 10px;
+
+    font-size: 1.5em;
+    color: $color-black-text;
+
+    width: max-content;
+
+    padding: 10px 20px;
+
+    cursor: pointer;
+
+    @include shadow(black, 30%);
+
+    display: flex;
+    align-items: center;
+
+    a {
+        color: $color-black-text;
+    }
+
+    a:hover {
+        color: $color-blue-flash;
+    }
+}
+
+.copy-image {
+    height: 20px;
+    width: auto;
+
+    opacity: 75%;
+
+    margin-right: 10px;
+}
+
+@keyframes colorTransition {
+    from {
+        color: rgba($color-blue-flash, 75%);
+    }
+
+    to {
+        color: rgba(black, 75%);
     }
 }
