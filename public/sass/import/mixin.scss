@@ -1,17 +1,17 @@
-@mixin shadow($shadowPercent) {
-    filter: drop-shadow(0 0 10px rgba(0, 0, 0, $shadowPercent));
+@mixin shadow($color, $shadowPercent) {
+    filter: drop-shadow(0 0 5px rgba($color, $shadowPercent));
 }
 
-@mixin movementAnimation($name, $finalPosition) {
+@mixin movementAnimation($name, $toY, $toX) {
     @keyframes #{$name} {
         0% {
-            transform: translateY(0) rotate(0deg);
+            transform: translateY(0) translateX(0) rotate(0deg);
 
             opacity: 1;
         }
     
         100% {
-            transform: translateY($finalPosition) rotate(720deg);
+            transform: translateY($toY) translateX($toX) rotate(720deg);
 
             opacity: 0;
         }
