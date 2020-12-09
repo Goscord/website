@@ -64,7 +64,7 @@ header {
                     height: $size;
                     width: $size;
 
-                    animation-delay: #{randomNumber(0, 15)}s;
+                    animation-delay: #{randomNumber(-7, 7)}s;
                     animation-duration: #{randomNumber(10, 50)}s;
 
                     background: rgba($color-green, 50% + percentage(random(40%) / 100));
