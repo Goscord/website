@@ -292,17 +292,60 @@ header {
     }
 }
 
+.examples {
+    height: 90vh;
     
-            @include shadow(30%);
+    background-color: $color-green-pastel;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .setup {
+        width: min(800px, 45vw);
+
+        p:not(.button) {
+            color: white;
+            font-size: 2em;
+
+            a {
+                font-weight: bold;
+                text-decoration: underline;
+            }
         }
 
-        a {
-            color: rgba(0, 0, 0, 75%);
+        #setup {
+            font-size: 3.5em;
+            font-weight: bold;
         }
+    }
 
-        a:hover {
-            color: $color-blue-flash;
+    pre {
+        width: min(800px, 45vw);
+
+        padding: 20px;
+
+        background-color: white;
+
+        border-radius: 10px;
+
+        box-shadow: 0 0 15px rgba(#000000, 20%);
+
+        /*position: relative; TODO
+
+        img {
+            position: absolute;
+
+            top: 10px;
+            right: 10px;
+        }*/
+
+        code p {
+            font-size: 2em;
         }
+    }
+}
+
     
         #module::before {
             content: "> ";
