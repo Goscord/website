@@ -395,11 +395,11 @@ header {
     }
 }
 
-section {
-    padding: 30px 0;
+.statistic {
+    height: 50vh;
 
-    p {
-        margin: 0;
+    background-color: $color-green-pastel;
+}
 
         text-align: center;
         font-size: 1.3em;
