@@ -384,6 +384,44 @@ header {
             font-size: 2em;
         }
     }
+
+    @media (max-width: 1200px) {
+        height: auto;
+
+        flex-direction: column;
+        justify-content: center;
+
+        .setup {
+            width: 95vw;
+
+            margin-bottom: 40px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            p {
+                text-align: center;
+            }
+
+            .button {
+                font-size: 4vw;
+
+                width: max-content;
+            }
+        }
+
+        pre {
+            width: 90vw;
+
+            padding: 2vw;
+
+            &::-webkit-scrollbar {
+                width: 0px;
+            }
+        }
+    }
 }
 
 .team {
