@@ -331,49 +331,118 @@ header {
 
 .team {
     height: 40vh;
-    width: 70%;
-
-    margin: auto;
+    width: 100%;
 
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 
-    .profil {
+    position: relative;
+
+    .profils {
+        width: 75%;
+
+        z-index: 2;
+
         display: flex;
+        align-items: center;
+        justify-content: space-evenly;
 
-        box-shadow: 0 0 10px rgba(#000000, 50%);
-
-        border-radius: 20px;
-
-        padding: 30px 50px;
-
-        img {
-            height: 17vh;
-            width: 17vh;
-    
-            object-fit: cover;
-    
-            border-radius: 300px;
-        }
-
-        .profil-description {
+        .profil {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+    
+            box-shadow: 0 0 10px rgba(#000000, 50%);
+    
+            border-radius: 20px;
+
+            background-color: white;
+    
+            padding: 30px 50px;
+    
+            > img {
+                height: 17vh;
+                width: 17vh;
         
-            * {
-                margin: 6px 0 6px 20px;
+                object-fit: cover;
+        
+                border-radius: 300px;
+            }
+    
+            .profil-description {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            
+                p {
+                    margin: 6px 0 6px 20px;
+                }
+    
+                p:nth-child(1) {
+                    font-size: 2em;
+                }
+    
+                p:nth-child(2) {
+                    font-size: 1.4em;
+                    color: $color-black-text;
+                }
+
+                img {
+                    height: 25px;
+                    width: auto;
+
+                    margin: 10px 0 0 20px;
+
+                    opacity: 75%;
+                }
+            }
+        }
+    }
+
+    .bubbles {
+        @include list-container();
+
+        display: flex;
+        align-items: center;
+
+        li {
+            position: absolute;
+
+            display: block;
+
+            list-style: none;
+
+            border-radius: 25px;
+
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+
+            @for $i from 1 through 20 {
+                &:nth-child(#{$i}) {
+                    $maxSize: 100;
+                    $size: #{randomNumber(30, $maxSize)}px;
+                    
+                    height: $size;
+                    width: $size;
+
+                    animation-delay: #{randomNumber(-15, 15)}s;
+                    animation-duration: #{randomNumber(10, 20)}s;
+
+                    background: rgba($color-green, 50% + percentage(random(40%) / 100));
+
+                    @if $i <= 15 {
+                        left: -#{$maxSize}px;
+
+                        animation-name: movementRight;
+                    } @else {
+                        right: -#{$maxSize}px;
+
+                        animation-name: movementLeft;
+                    }
+                }
             }
 
-            p:nth-child(1) {
-                font-size: 2em;
-            }
-
-            p:nth-child(2) {
-                font-size: 1.4em;
-                color: $color-black-text;
-            }
+            @include movementAnimation(movementLeft, 0, -100vw);
+            @include movementAnimation(movementRight, 0, 100vw);
         }
     }
 }

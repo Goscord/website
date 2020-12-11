@@ -114,27 +114,42 @@
     </section>
 
     <section class="team">
-        <div class="profil">
-            <img src="/images/team/bluzzi.png" alt="Bluzzi">
+        <div class="profils">
+            <div class="profil">
+                <img src="/images/team/bluzzi.png" alt="Bluzzi">
+    
+                <div class="profil-description">
+                    <p>Bluzzi</p>
+                    <p>Website development</p>
 
-            <div class="profil-description">
-                <p>Bluzzi</p>
-                <p>Website development</p>
+                    <div class="medias">
+                        <a href="https://twitter.com/Bluzzi_" target="_blank"><img src="/images/medias/twitter.svg" alt="Twitter"></a>
+                        <a href="https://github.com/Bluzzi" target="_blank"><img src="/images/medias/github.svg" alt="GitHub"></a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="profil">
+                <img src="/images/team/seyz.jpg" alt="Seyz">
+                
+                <div class="profil-description">
+                    <p>Seyz</p>
+                    <p>Main API Developer</p>
+
+                    <div class="medias">
+                        <a href="https://twitter.com/szeroki_" target="_blank"><img src="/images/medias/twitter.svg" alt="Twitter"></a>
+                        <a href="https://github.com/Seyz123" target="_blank"><img src="/images/medias/github.svg" alt="GitHub"></a>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="profil">
-            <img src="/images/team/seyz.jpg" alt="Seyz">
-            
-            <div class="profil-description">
-                <p>Seyz</p>
-                <p>Main API Developer</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="statistic">
-
+        <!-- Bubble for animation -->
+        <ul class="bubbles">
+            <% for(let i = 0; i < 30; i++){ %>
+                <li></li>
+            <% } %>
+        </ul>
     </section>
 
     <footer>
