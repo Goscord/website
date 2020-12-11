@@ -272,41 +272,70 @@ header {
 
             display: grid;
             grid-template-rows: auto auto;
-            grid-template-columns: 40px 350px;
 
             * {
                 width: 100%;
             }
 
-            .advantage-emoji {
-                grid-column: 1;
+            .advantage-top {
                 grid-row: 1;
 
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                display: grid;
+                grid-template-columns: 40px 350px;
 
-                p {
-                    margin: 0;
+                .advantage-emoji {
+                    grid-column: 1;
+    
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+    
+                    p {
+                        margin: 0;
+                    }
+                }
+    
+                .advantage-title {
+                    grid-column: 2;
+    
+                    text-align: left;
+                    color: black;
+                    font-weight: bold;
+                    font-size: 1.7em;
                 }
             }
 
-            .advantage-title {
-                grid-column: 2;
-                grid-row: 1;
-
-                text-align: left;
-                color: black;
-                font-weight: bold;
-                font-size: 1.7em;
-            }
-
             .advantage-description {
-                grid-column: 2;
                 grid-row: 2;
 
                 text-align: left;
                 font-size: 1.3em;
+
+                margin-left: 40px;
+            }
+
+            @media (max-width: 500px) {
+                margin: 40px 0;
+
+                .advantage-top {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                   
+                    .advantage-emoji {
+                        width: 40px;
+                    }
+
+                    .advantage-title {
+                        width: max-content;
+                    }
+                }
+
+                .advantage-description {
+                    text-align: center;
+
+                    margin-left: 0;
+                }
             }
         }
     }
