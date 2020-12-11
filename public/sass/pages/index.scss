@@ -416,6 +416,7 @@ header {
             width: 90vw;
 
             padding: 2vw;
+            margin-bottom: 80px;
 
             &::-webkit-scrollbar {
                 width: 0px;
@@ -425,11 +426,9 @@ header {
 }
 
 .team {
-    height: 40vh;
     width: 100%;
 
-    //display: flex;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
 
@@ -443,9 +442,22 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        flex-wrap: wrap;
+
+        margin: 8vh 0;
+
+        @media (max-width: 1700px) {
+            width: 100%;
+
+            .profil {
+                margin: 25px;
+            }
+        }
 
         .profil {
             display: flex;
+
+            width: min(400px, 90vw);
     
             box-shadow: 0 0 10px rgba(#000000, 50%);
     
@@ -454,6 +466,10 @@ header {
             background-color: white;
     
             padding: 30px 50px;
+
+            @media (max-width: 800px) {
+                padding: 2vh 4vw;
+            }
     
             > img {
                 height: 17vh;
@@ -505,6 +521,10 @@ header {
 
         display: flex;
         align-items: center;
+
+        @media (max-width: 1250px) {
+            display: none;
+        }
 
         li {
             position: absolute;
