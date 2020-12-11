@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"strings"
 
 	"github.com/Goscord/goscord"
 	"github.com/Goscord/goscord/discord"
@@ -23,8 +22,8 @@ func main() {
 	})
 
 	client.On("message", func(msg *discord.Message) {
-		if strings.ToLower(msg.Content) == "ping" {
-			_, _ = msg.Reply("Pong ! 🏓")
+		if msg.Content == "ping" {
+			msg.Reply("Pong ! 🏓")
 		}
 	})
 }
