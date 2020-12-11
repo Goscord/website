@@ -29,8 +29,7 @@ server.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 fs.readdirSync(__dirname + "/routes/").forEach(fileName => require("./routes/" + fileName)); //TODO: ajout du support des sous dossier.
 
 server.get("*", (request, response) => {
-    response.render("error");
-    response.status(404);
+    response.redirect("/");
 });
 
 // Listen port :
