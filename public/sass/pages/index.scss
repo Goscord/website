@@ -428,7 +428,8 @@ header {
     height: 40vh;
     width: 100%;
 
-    display: flex;
+    //display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 
@@ -560,6 +561,11 @@ footer {
     p {
         color: white;
         font-size: 1.5em;
+        text-align: center;
+
+        @media (max-width: 550px) {
+            font-size: 5vw;
+        }
     }
 }
 
