@@ -2,14 +2,7 @@
 @import "../import/function.scss";
 @import "../import/mixin.scss";
 
-body {
-    display: grid;
-
-    grid-template-rows: 100vh auto;
-}
-
 header {
-    grid-row: 1;
 
     display: flex;
     align-items: center;
