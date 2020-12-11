@@ -3,6 +3,7 @@
 @import "../import/mixin.scss";
 
 header {
+    height: 100vh;
 
     display: flex;
     align-items: center;
@@ -11,10 +12,14 @@ header {
 
     background-color: $color-dark;
 
+    position: relative;
+
     // Background animation :
 
     .bubbles {
         @include list-container();
+
+        height: 100%;
 
         li {
             position: absolute;
@@ -131,8 +136,6 @@ header {
         width: 50%;
 
         margin: 0 0 30px 0;
-
-        position: relative;
 
         top: -20px;
     }
