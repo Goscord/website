@@ -488,7 +488,7 @@ footer {
     }
 
     a:hover {
-        color: $color-blue-flash;
+        color: $color-green-pastel;
     }
 }
 
@@ -503,7 +503,7 @@ footer {
 
 @keyframes colorTransition {
     from {
-        color: rgba($color-blue-flash, 75%);
+        color: rgba($color-green-pastel, 75%);
     }
 
     to {
