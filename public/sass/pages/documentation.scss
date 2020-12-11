@@ -1,0 +1,12 @@
+@import "../import/color.scss";
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        font-size: 4em;
+        color: $color-green-pastel;
+    }
+}
