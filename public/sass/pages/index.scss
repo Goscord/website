@@ -158,6 +158,35 @@ header {
         }
     }
 
+    @media (max-width: 920px) {
+        h1 {
+            font-size: 20vw;
+        }
+
+        #description {
+            width: 95%;
+
+            font-size: 7.5vw;
+        }
+
+        .buttons {
+            align-content: center;
+
+            height: auto;
+            width: 95%;
+
+            p {
+                font-size: 5vw;
+
+                margin-bottom: 25px;
+            }
+
+            p:nth-child(3) {
+                font-size: 4vw;
+            }
+        }
+    }
+
     // Scroll mouse :
 
     .scroll-mouse {
@@ -202,6 +231,8 @@ header {
         color: $color-green-pastel;
 
         margin: 0 0 40px 0;
+
+        text-align: center;
     }
 
     p {
@@ -209,9 +240,19 @@ header {
         text-align: center;
         color: $color-black-text;
 
-        width: 50vw;
+        width: 60%;
 
         margin: 0;
+    }
+
+    @media (max-width: 920px) {
+        h3 {
+            font-size: 10vw;
+        }
+
+        p {
+            width: 95%;
+        }
     }
 
     .advantages {
