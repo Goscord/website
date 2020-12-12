@@ -4,9 +4,24 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
     p {
+        margin: 0;
+    }
+
+    p:nth-child(1) {
         font-size: 4em;
         color: $color-green-pastel;
+    }
+
+    p:nth-child(2) {
+        font-size: 2em;
+
+        background-color: $color-green-pastel;
+
+        border-radius: 50px;
+
+        padding: 10px 25px;
     }
 }
