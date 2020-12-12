@@ -26,4 +26,6 @@ func main() {
 			msg.Reply("Pong ! 🏓")
 		}
 	})
+
+	select {}
 }
