@@ -23,7 +23,7 @@ func main() {
 
 	client.On("message", func(msg *discord.Message) {
 		if msg.Content == "ping" {
-			msg.Reply("Pong ! 🏓")
+			client.Channel.Send(msg.ChannelId, "Pong ! 🏓")
 		}
 	})
 
