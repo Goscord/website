@@ -18,7 +18,7 @@ func main() {
 	})
 
 	client.On("ready", func() {
-		fmt.Println("Logged in as " + client.User().Tag())
+		fmt.Println("Logged in as " + client.Me().Tag())
 	})
 
 	client.On("message", func(msg *discord.Message) {
