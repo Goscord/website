@@ -27,9 +27,7 @@ func main() {
 		}
 	})
 
-	if err := client.Login(); err != nil {
-		panic(err)
-	}
+	client.Login()
 
 	select {}
 }
