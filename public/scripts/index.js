@@ -45,6 +45,16 @@ function burgerClick(){
     burgerActived = !burgerActived;
 }
 
+window.addEventListener("click", event => {
+    if(document.querySelector("nav .burger").contains(event.target)){
+        burgerClick();
+    } else {
+        if(burgerActived && !document.querySelector("nav .menu").contains(event.target)){
+            burgerClick();
+        }
+    }
+});
+
 window.addEventListener("scroll", () => {
     if(burgerActived) burgerClick();
 
