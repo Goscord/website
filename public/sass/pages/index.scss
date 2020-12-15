@@ -140,6 +140,93 @@ header {
         top: -20px;
     }
 
+    nav {
+        z-index: 3;
+
+        * {
+            list-style: none;
+        }
+
+        .burger {
+            position: fixed;
+
+            top: 15px;
+            right: 15px;
+
+            height: 60px;
+            width: 60px;
+
+            margin: 0;
+            padding: 0;
+
+            background-color: white;
+
+            border-radius: 40px;
+            
+            box-shadow: 0 0 3px rgba(#000000, 30%);
+
+            cursor: pointer;
+
+            transition: opacity 0.2s;
+
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            li {
+                height: 3px;
+                width: 30px;
+
+                border-radius: 20px;
+
+                background-color: rgba(#000000, 70%);
+
+                transition: background-color 0.5s, transform 0.5s, opacity 0.2s;
+
+                &:nth-child(1), &:nth-child(2) {
+                    margin-bottom: 7.5px;
+                }
+            }
+        }
+
+        .menu {
+            position: fixed;
+
+            top: 15vh;
+            right: -85vw;
+
+            height: 70vh;
+            width: 85vw;
+
+            margin: 0;
+            padding: 0;
+
+            border-radius: 10px 0 0 10px;
+
+            box-shadow: 0 0 15px rgba(#000000, 40%);
+
+            background-color: white;
+
+            transition: transform 0.5s;
+
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            p {
+                font-size: 10vw;
+
+                margin: 10px 5vw;
+
+                a {
+                    color: $color-black-text;
+                    opacity: 90%;
+                }
+            }
+        }
+    }
+
     .buttons {
         display: flex;
         flex-direction: row;
@@ -169,21 +256,12 @@ header {
             font-size: 7.5vw;
         }
 
+        nav .burger {
+            display: flex;
+        }
+
         .buttons {
-            align-content: center;
-
-            height: auto;
-            width: 95%;
-
-            p {
-                font-size: 5vw;
-
-                margin-bottom: 25px;
-            }
-
-            p:nth-child(3) {
-                font-size: 4vw;
-            }
+            display: none;
         }
     }
 

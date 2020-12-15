@@ -22,7 +22,30 @@ function copyText(text){
     setTimeout(() => text.style.removeProperty("animation"), 1000);
 }
 
+let burgerActived = false;
+
+function burgerClick(){
+    let menu = document.querySelector("nav .menu");
+    let burger = document.querySelector("nav .burger");
+
+    if(burgerActived){
+        menu.style.transform = "none";
+        
+        burger.style.opacity = 1;
+        burger.style.pointerEvents = "auto";
+    } else {
+        menu.style.transform = "translateX(-85vw)";
+
+        burger.style.opacity = 0;
+        burger.style.pointerEvents = "none";
+    }
+
+    burgerActived = !burgerActived;
+}
+
 window.addEventListener("scroll", () => {
+    if(burgerActived) burgerClick();
+
     let opacity = 1 - ((window.scrollY + 1) / 500);
 
     document.querySelector(".corners").style.opacity = opacity;
