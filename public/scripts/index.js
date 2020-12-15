@@ -1,3 +1,5 @@
+changeScrollMouseIcon();
+
 /**
  * @param {HTMLElement} text 
  */
@@ -51,3 +53,20 @@ window.addEventListener("scroll", () => {
     document.querySelector(".corners").style.opacity = opacity;
     document.querySelector(".scroll-mouse").style.opacity = opacity;
 });
+
+window.addEventListener("resize", () => {
+    changeScrollMouseIcon();
+});
+
+/**
+ * @returns {bool}
+ */
+function changeScrollMouseIcon(){
+    if(window.matchMedia("(max-width: 600px)").matches){
+        var imagePath = "/images/UI/touch.svg";
+    } else {
+        var imagePath = "/images/UI/mouse.svg";
+    }
+
+    document.querySelector(".scroll-mouse img").src = imagePath;
+}
