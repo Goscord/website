@@ -1,11 +1,13 @@
 changeScrollMouseIcon();
 
+// Variables :
 
 let burgerActived = false;
 
 /** @var {{x: float, y: float}} */
 let mousePosition;
 
+// Functions :
 
 /**
  * @param {HTMLElement} text 
@@ -75,6 +77,7 @@ function changeScrollMouseIcon(){
     document.querySelector(".scroll-mouse img").src = imagePath;
 }
 
+// Events :
 
 window.addEventListener("scroll", () => {
     if(burgerActived) burgerUpdate();
