@@ -1,5 +1,12 @@
 changeScrollMouseIcon();
 
+
+let burgerActived = false;
+
+/** @var {{x: float, y: float}} */
+let mousePosition;
+
+
 /**
  * @param {HTMLElement} text 
  */
@@ -24,9 +31,7 @@ function copyText(text){
     setTimeout(() => text.style.removeProperty("animation"), 1000);
 }
 
-let burgerActived = false;
-
-function burgerClick(){
+function burgerUpdate(){
     let menu = document.querySelector("nav .menu");
     let burger = document.querySelector("nav .burger");
 
@@ -45,28 +50,17 @@ function burgerClick(){
     burgerActived = !burgerActived;
 }
 
-window.addEventListener("click", event => {
-    if(document.querySelector("nav .burger").contains(event.target)){
-        burgerClick();
+function burgerClick(){
+    let element = document.elementFromPoint(mousePosition.x, mousePosition.y);
+
+    if(document.querySelector("nav .burger").contains(element)){
+        burgerUpdate();
     } else {
-        if(burgerActived && !document.querySelector("nav .menu").contains(event.target)){
-            burgerClick();
+        if(burgerActived && !document.querySelector("nav .menu").contains(element)){
+            burgerUpdate();
         }
     }
-});
-
-window.addEventListener("scroll", () => {
-    if(burgerActived) burgerClick();
-
-    let opacity = 1 - ((window.scrollY + 1) / 500);
-
-    document.querySelector(".corners").style.opacity = opacity;
-    document.querySelector(".scroll-mouse").style.opacity = opacity;
-});
-
-window.addEventListener("resize", () => {
-    changeScrollMouseIcon();
-});
+}
 
 /**
  * @returns {bool}
@@ -80,3 +74,24 @@ function changeScrollMouseIcon(){
 
     document.querySelector(".scroll-mouse img").src = imagePath;
 }
+
+
+window.addEventListener("scroll", () => {
+    if(burgerActived) burgerUpdate();
+
+    let opacity = 1 - ((window.scrollY + 1) / 500);
+
+    document.querySelector(".corners").style.opacity = opacity;
+    document.querySelector(".scroll-mouse").style.opacity = opacity;
+});
+
+window.addEventListener("resize", () => {
+    changeScrollMouseIcon();
+});
+
+document.addEventListener("mousemove", event => {
+    mousePosition = {
+        x: event.clientX,
+        y: event.clientY
+    }
+});
