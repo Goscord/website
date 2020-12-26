@@ -3,9 +3,17 @@ changeScrollMouseIcon();
 // Variables :
 
 let burgerActived = false;
+let currentScrollMouseIcon;
 
 /** @var {{x: float, y: float}} */
 let mousePosition;
+
+/** @var {HTMLElement} */
+let burger = document.querySelector("nav .burger");
+
+// Call function :
+
+changeScrollMouseIcon();
 
 // Functions :
 
@@ -73,7 +81,11 @@ function changeScrollMouseIcon(){
         var imagePath = "/images/UI/mouse.svg";
     }
 
-    document.querySelector(".scroll-mouse img").src = imagePath;
+    if(imagePath !== currentScrollMouseIcon){
+        document.querySelector(".scroll-mouse img").src = imagePath;
+
+        currentScrollMouseIcon = imagePath;
+    }
 }
 
 // Events :
