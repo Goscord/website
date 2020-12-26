@@ -1,5 +1,3 @@
-changeScrollMouseIcon();
-
 // Variables :
 
 let burgerActived = false;
