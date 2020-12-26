@@ -35,7 +35,6 @@ function copyText(text){
 
 function burgerUpdate(){
     let menu = document.querySelector("nav .menu");
-    let burger = document.querySelector("nav .burger");
 
     if(burgerActived){
         menu.style.transform = "none";
@@ -43,7 +42,7 @@ function burgerUpdate(){
         burger.style.opacity = 1;
         burger.style.pointerEvents = "auto";
     } else {
-        menu.style.transform = "translateX(-85vw)";
+        menu.style.transform = "translateX(-100vw)";
 
         burger.style.opacity = 0;
         burger.style.pointerEvents = "none";

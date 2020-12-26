@@ -150,8 +150,8 @@ header {
         .burger {
             position: fixed;
 
-            top: 15px;
-            right: 15px;
+            bottom: 20px;
+            right: 20px;
 
             height: 60px;
             width: 60px;
@@ -193,14 +193,14 @@ header {
         .menu {
             position: fixed;
 
-            top: 15vh;
-            right: -85vw;
+            bottom: 15vh;
+            right: -100vw;
 
-            height: 70vh;
-            width: 85vw;
+            height: max-content;
+            width: max-content;
 
             margin: 0;
-            padding: 0;
+            padding: 10px 0;
 
             border-radius: 10px 0 0 10px;
 
@@ -208,16 +208,16 @@ header {
 
             background-color: white;
 
-            transition: transform 0.5s;
+            transition: transform 0.8s;
 
             display: flex;
             justify-content: center;
             flex-direction: column;
 
             p {
-                font-size: 10vw;
+                font-size: 1.5em;
 
-                margin: 10px 5vw;
+                margin: 5px 5vw 5px 2.5vw;
 
                 a {
                     color: $color-black-text;
