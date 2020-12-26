@@ -101,9 +101,12 @@ window.addEventListener("resize", () => {
     changeScrollMouseIcon();
 });
 
+// Document events :
+
 document.addEventListener("mousemove", event => {
     mousePosition = {
         x: event.clientX,
         y: event.clientY
     }
 });
+
