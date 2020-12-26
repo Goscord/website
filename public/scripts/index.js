@@ -86,7 +86,7 @@ function changeScrollMouseIcon(){
     }
 }
 
-// Events :
+// Window events :
 
 window.addEventListener("scroll", () => {
     if(burgerActived) burgerUpdate();
