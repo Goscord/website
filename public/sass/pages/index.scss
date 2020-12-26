@@ -222,6 +222,10 @@ header {
                 a {
                     color: $color-black-text;
                     opacity: 90%;
+
+                    &:hover {
+                        color: $color-green-pastel;
+                    }
                 }
             }
         }
