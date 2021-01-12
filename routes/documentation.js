@@ -1,3 +1,3 @@
 server.get("/documentation", (request, response) => {
-    response.render("documentation");
+    response.redirect("https://pkg.go.dev/github.com/Goscord/goscord#section-documentation");
 });
