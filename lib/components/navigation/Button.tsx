@@ -5,25 +5,18 @@ import Icon from "$lib/components/icons/Icon";
 import Text from "$lib/components/Text";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  color?: "simple" | "primary";
   size?: "normal" | "large";
-
   iconSrc?: string;
-
   href?: string;
 }
 
 export default function Button(
-  { children, color = "primary", size = "normal", iconSrc, href, className, ...props }: PropsWithChildren<ButtonProps>
+  { children, size = "normal", iconSrc, href, className, ...props }: PropsWithChildren<ButtonProps>
 ): ReactElement {
   const buttonStyle = clsx(
-    "h-fit w-fit",
-    "rounded",
-    "transition-transform hover:scale-105", 
-    {
-      "bg-primary shadow hover:brightness-105": color === "primary",
-      "bg-gray shadow-sm border border-separator-secondary hover:border-separator-primary": color === "simple"
-    },
+    "h-fit w-fit bg-white",
+    "rounded shadow",
+    "transition-transform hover:scale-105",
     {
       "py-2 px-3": size === "normal",
       "py-2 px-6": size === "large"
@@ -32,14 +25,14 @@ export default function Button(
 
   function Button(): ReactElement {
     return (
-      <button type='button' className={`${buttonStyle} ${className ?? ""}`} {...props}>
+      <button type="button" className={`${buttonStyle} ${className ?? ""}`} {...props}>
         <Text 
-          color={color === "primary" ? "white" : "black"} 
+          color="gray"
           size={size === "large" ? "large" : "base"} 
-          className='flex items-center gap-2'
+          className="flex items-center gap-2"
         >
           {children}
-          {iconSrc && <Icon src={iconSrc} alt='button icon' size={18} />}
+          {iconSrc && <Icon src={iconSrc} alt="button icon" size={18} />}
         </Text>
       </button>
     );
