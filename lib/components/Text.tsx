@@ -15,8 +15,7 @@ export default function Text({
     // Text color :
     "text-black": color === "black",
     "text-white": color === "white",
-    "text-gray": color === "gray",
-    "text-red": color === "error",
+    "text-black-light": color === "gray",
 
     // Font size :
     "text-base": size === "base",
