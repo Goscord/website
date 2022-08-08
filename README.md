@@ -1,3 +1,2 @@
-# Website
-
-The Goscord Discord API presentation website.
+# Goscord Website
+The Goscord API website, it is written with NextJS.
