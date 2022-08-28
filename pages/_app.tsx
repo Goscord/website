@@ -1,8 +1,8 @@
 import type { AppProps } from "next/app";
 import { ReactElement } from "react";
 import Head from "next/head";
-import "../lib/styles/globals.css";
-import "../lib/styles/tailwind.css";
+import "$lib/styles/globals.css";
+import "$lib/styles/tailwind.css";
 
 export default function MyApp({ Component, pageProps }: AppProps): ReactElement {
   return (
