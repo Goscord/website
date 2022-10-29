@@ -18,11 +18,11 @@ server.set("views", __dirname + "/views");
 server.set("view engine", "ejs");
 
 // Routes and 404 error :
-fs.readdirSync(__dirname + "/routes/").forEach(fileName => require("./routes/" + fileName)); //TODO: ajout du support des sous dossier.
+fs.readdirSync(__dirname + "/routes/").forEach(fileName => require("./routes/" + fileName));
 
 server.get("*", (request, response) => {
     response.redirect("/");
 });
 
 // Listen port :
-server.listen(3002);
+server.listen(process.env.PORT || 3000);
