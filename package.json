@@ -1,0 +1,19 @@
+{
+  "name": "goscord-website",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "bluzzi",
+  "scripts": {
+    "start": "nodemon -e js,scss,ejs,json ."
+  },
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "~4.16.1",
+    "fs": "0.0.1-security",
+    "sass": "^1.26.10",
+    "sass-folder-converter": "^1.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
