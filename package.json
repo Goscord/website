@@ -1,19 +1,27 @@
 {
-  "name": "goscord-website",
-  "version": "1.0.0",
-  "main": "server.js",
-  "author": "bluzzi",
+  "version": "2.0.0",
   "scripts": {
-    "start": "nodemon -e js,scss,ejs,json ."
+    "dev": "next dev -p 3002",
+    "build": "next build",
+    "start": "next start -p 3002",
+    "lint": "next lint --fix"
   },
   "dependencies": {
-    "ejs": "^3.1.5",
-    "express": "~4.16.1",
-    "fs": "0.0.1-security",
-    "sass": "^1.26.10",
-    "sass-folder-converter": "^1.0.3"
+    "clsx": "^1.2.1",
+    "next": "12.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "@types/node": "18.6.4",
+    "@types/react": "18.0.17",
+    "@types/react-dom": "18.0.6",
+    "autoprefixer": "^10.4.8",
+    "eslint": "8.21.0",
+    "eslint-config-next": "12.2.4",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8",
+    "tsconfig-paths": "^4.1.0",
+    "typescript": "4.7.4"
   }
 }
