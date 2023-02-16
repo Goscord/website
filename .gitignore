@@ -42,3 +42,6 @@ package-lock.json
 
 # old files
 __old__
+
+# IDE
+.vscode/settings.json
