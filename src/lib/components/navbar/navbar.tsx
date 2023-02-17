@@ -11,7 +11,9 @@ export function Navbar(): ReactElement {
 
   return (
     <nav className={clsx(
-      "bg-primary h-96 max-h-20 flex items-center justify-between px-16 sm:px-3",
+      "bg-primary h-96 max-h-20",
+      "flex items-center justify-between",
+      "px-16 sm:px-3",
       "transition-[max-height] duration-300",
       {
         "max-h-96 flex-col justify-evenly gap-5": burgerOpen
@@ -23,6 +25,7 @@ export function Navbar(): ReactElement {
         "flex items-center",
         {
           "gap-10 lg:hidden": !burgerOpen,
+          "place-content-end w-full mr-10": !burgerOpen,
           "flex-col gap-2": burgerOpen
         }
       )}>
