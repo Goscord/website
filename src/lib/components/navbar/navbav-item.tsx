@@ -14,12 +14,11 @@ export function NavbarItem({ label, href, external = false }: NavbarItemProps): 
     <Link href={href} target={external ? "_blank" : "_self"}>
       <Text size="large" className={clsx(
         "py-3 px-4 rounded",
-        "",
         "transition-colors duration-300",
         {
           "flex items-center gap-2": external,
           "bg-primary-1": isActive,
-          "bg-transparent hover:bg-primary-1": !isActive
+          "hover:bg-primary-1": !isActive
         }
       )}>
         {label}
