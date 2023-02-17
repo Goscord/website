@@ -17,7 +17,7 @@ export default function Head(): ReactElement {
       <meta name="theme-color" content="#5aa469" />
 
       {/* Favicon */}
-      <link rel="shortcut icon" href="/goscord/png" type="image/png" />
+      <link rel="shortcut icon" href="/goscord.png" type="image/png" />
     </>
   );
 }
