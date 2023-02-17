@@ -11,7 +11,7 @@ export function GitHubStars(): ReactElement {
 
   return (
     <Link href={goscord.github.mainRepoUrl} target="_blank">
-      <Text size="large" className="flex items-center gap-2">
+      <Text size="large" className="flex items-center gap-2 w-max">
         <FiGithub />
 
         <span>{githubStarsReady ? githubStars : "..."} STARS <span className="sm:hidden">AND COUNTING</span></span>
