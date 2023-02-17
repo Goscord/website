@@ -1,0 +1,1 @@
+export { GitHubStars } from "./github-stars";
