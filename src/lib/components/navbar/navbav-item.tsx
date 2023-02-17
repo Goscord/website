@@ -10,8 +10,6 @@ export function NavbarItem({ label, href, external = false }: NavbarItemProps): 
   const pathname = usePathname();
   const isActive = pathname === href;
 
-  console.log(pathname, href, isActive);
-
   return (
     <Link href={href} target={external ? "_blank" : "_self"}>
       <Text size="large" className={clsx(
