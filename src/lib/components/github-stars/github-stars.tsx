@@ -14,7 +14,7 @@ export function GitHubStars(): ReactElement {
       <Text size="large" className="flex items-center gap-2">
         <FiGithub />
 
-        <span>{githubStarsReady ? githubStars : "..."}</span> STARS AND COUNTING
+        <span>{githubStarsReady ? githubStars : "..."} STARS <span className="sm:hidden">AND COUNTING</span></span>
       </Text>
     </Link>
   );
