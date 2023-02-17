@@ -7,10 +7,17 @@ export function Burger({ open, setOpen, className, ...props }: BurgerProps): Rea
   const Tag = open ? FiX : FiMenu;
 
   return (
-    <Tag
-      className={clsx("text-3xl text-white", className)}
-      onClick={() => setOpen(state => !state)}
-      {...props}
-    />
+    <span className={clsx(
+      "p-4 rounded cursor-pointer",
+      "transition-colors duration-300",
+      "hover:bg-primary-1",
+      className
+    )}>
+      <Tag
+        className={clsx("text-3xl text-white")}
+        onClick={() => setOpen(state => !state)}
+        {...props}
+      />
+    </span>
   );
 }
