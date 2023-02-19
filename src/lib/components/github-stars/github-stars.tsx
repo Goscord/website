@@ -7,14 +7,14 @@ import { goscord } from "#/lib/configs/goscord";
 import Link from "next/link";
 
 export function GitHubStars(): ReactElement {
-  const { isSuccess: githubStarsReady, data: githubStars } = useQuery(["github", "stars"], getGithubStars);
+  const { isSuccess, data } = useQuery(["github", "stars"], getGithubStars);
 
   return (
     <Link href={goscord.github.mainRepoUrl} target="_blank">
       <Text size="large" className="flex items-center gap-2 w-max">
         <FiGithub />
 
-        <span>{githubStarsReady ? githubStars : "..."} STARS <span className="sm:hidden">AND COUNTING</span></span>
+        <span>{isSuccess ? data : "..."} STARS <span className="sm:hidden">AND COUNTING</span></span>
       </Text>
     </Link>
   );
