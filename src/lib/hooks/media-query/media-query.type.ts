@@ -1,4 +1,4 @@
-export type Pixel = `${number}px`;
+export type Pixel = number;
 
 export type MediaQuery = {
   type: "max" | "min";

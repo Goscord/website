@@ -9,7 +9,7 @@ import { useMediaQuery } from "#/lib/hooks/media-query";
 
 export function Navbar(): ReactElement {
   const [burgerOpen, setBurgerOpen] = useState(false);
-  const isMobile = useMediaQuery({ type: "max", width: "1023px" });
+  const isMobile = useMediaQuery({ type: "max", width: 1023 });
 
   if (isMobile) return (
     <nav className="bg-primary px-16 sm:px-3">
