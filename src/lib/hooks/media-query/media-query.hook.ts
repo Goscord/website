@@ -2,13 +2,10 @@ import { useEffect, useState } from "react";
 import { MediaQuery } from "./media-query.type";
 
 export function useMediaQuery(query: MediaQuery): boolean {
-  const queryWidth = Number(query.width.replace("px", ""));
-  const windowWidth = window.innerWidth;
-
   const [match, setMatch] = useState(
     query.type === "max"
-      ? windowWidth <= queryWidth
-      : windowWidth >= queryWidth
+      ? window.innerWidth <= query.width
+      : window.innerWidth >= query.width
   );
 
   useEffect(() => {
