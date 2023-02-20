@@ -9,9 +9,11 @@ import { useMediaQuery } from "#/lib/hooks/media-query";
 
 export function Navbar(): ReactElement {
   const [burgerOpen, setBurgerOpen] = useState(false);
-  const isMobile = useMediaQuery({ type: "max", width: 1023 });
+  const mediaQuery = useMediaQuery({ type: "max", width: "1023px" });
 
-  if (isMobile) return (
+  if (mediaQuery === "loading") return <nav className="bg-primary h-20" />;
+
+  if (mediaQuery === "match") return (
     <nav className="bg-primary px-16 sm:px-3">
       {/* Menu */}
       <div className="h-20 flex items-center justify-between">
