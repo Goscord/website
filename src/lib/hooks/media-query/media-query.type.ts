@@ -1,6 +1,8 @@
-export type Pixel = number;
+export type Pixel = `${number}px`;
 
-export type MediaQuery = {
+export type UseMediaQueryProps = {
   type: "max" | "min";
   width: Pixel;
 }
+
+export type UseMediaQueryResult = "match" | "unmatch" | "loading";
