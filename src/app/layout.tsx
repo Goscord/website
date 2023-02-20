@@ -4,10 +4,8 @@ import "#/lib/styles/reset.css";
 import "#/lib/styles/font.css";
 import "#/lib/styles/tailwind.css";
 import { Navbar } from "#/lib/components/navbar/navbar";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { PropsWithChildren, ReactElement } from "react";
-
-const queryClient = new QueryClient();
+import { Provider } from "./provider";
 
 export default function RootLayout({ children }: PropsWithChildren): ReactElement {
   return (
@@ -15,11 +13,11 @@ export default function RootLayout({ children }: PropsWithChildren): ReactElemen
       <head />
 
       <body>
-        <QueryClientProvider client={queryClient}>
+        <Provider>
           <Navbar />
 
           {children}
-        </QueryClientProvider>
+        </Provider>
       </body>
     </html>
   );
