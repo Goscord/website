@@ -15,7 +15,7 @@ module.exports = {
       "black": "#000000",
 
       "primary": {
-        DEFAULT: "#5aa469",
+        DEFAULT: "#5AA469",
         1: "#4a8c5a"
       },
 
@@ -40,6 +40,16 @@ module.exports = {
       "lg": { "max": "1023px" },
       "md": { "max": "767px" },
       "sm": { "max": "639px" }
+    },
+
+    borderRadius: {
+      DEFAULT: "0.25rem",
+      none: "0",
+      full: "9999px"
+    },
+
+    boxShadow: {
+      DEFAULT: "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)"
     },
 
     extend: {}
