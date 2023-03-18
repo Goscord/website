@@ -2,7 +2,6 @@ import { ReactElement, useState } from "react";
 import { navbarPages } from "#/lib/configs/navbar";
 import { NavbarItem } from "./navbav-item";
 import { Theme } from "#/lib/components/theme";
-import { GitHubStars } from "#/lib/components/github-stars";
 import { Burger } from "#/lib/components/burger";
 import { clsx } from "clsx";
 import { useMediaQuery } from "#/lib/hooks/media-query";
