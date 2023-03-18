@@ -5,7 +5,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint:fix": "next lint --fix"
+    "lint:fix": "next lint --fix",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.27.0",
@@ -23,6 +24,7 @@
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
     "autoprefixer": "^10.4.14",
+    "dotenv": "^16.0.3",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
     "postcss": "^8.4.21",
