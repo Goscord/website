@@ -1,3 +1,5 @@
+"use client";
+
 import { ReactElement, useState } from "react";
 import { navbarPages } from "#/lib/configs/navbar";
 import { NavbarItem } from "./navbav-item";
