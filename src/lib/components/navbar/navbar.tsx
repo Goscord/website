@@ -16,13 +16,9 @@ export function Navbar(): ReactElement {
   if (mediaQuery === "match") return (
     <nav className="bg-primary px-16 sm:px-3">
       {/* Menu */}
-      <div className="h-20 flex items-center justify-between">
-        <GitHubStars />
-
-        <div className="flex items-center gap-2">
-          <Theme />
-          <Burger open={burgerOpen} setOpen={setBurgerOpen} />
-        </div>
+      <div className="h-20 flex items-center justify-between gap-2">
+        <Theme />
+        <Burger open={burgerOpen} setOpen={setBurgerOpen} />
       </div>
 
       {/* Pages and links */}
@@ -52,15 +48,13 @@ export function Navbar(): ReactElement {
 
   return (
     <nav className="bg-primary h-20 flex items-center justify-between px-16">
-      <GitHubStars />
-
       <div className="flex items-center gap-10">
         {navbarPages.map(page => (
           <NavbarItem key={page.label} label={page.label} href={page.href} external={page.external} />
         ))}
-
-        <Theme />
       </div>
+
+      <Theme />
     </nav>
   );
 }
