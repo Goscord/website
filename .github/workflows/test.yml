@@ -13,14 +13,12 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-        with:
-          node-version: 16
+      - uses: actions/checkout@v3
       - name: Install dependencies
         run: npm install
       - name: Install Playwright browsers
-        run: npm exec playwright install --with-deps
+        run: npx playwright install --with-deps
       - name: Run Playwright
         run: npm run test:e2e
         env: ${{ secrets }}
