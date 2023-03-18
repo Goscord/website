@@ -21,6 +21,7 @@ export default defineConfig({
 
   use: {
     baseURL: baseURL,
+    screenshot: "only-on-failure",
     trace: "retry-with-trace"
   },
 
