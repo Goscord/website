@@ -21,8 +21,9 @@ jobs:
         run: pnpm install
       - name: Install Playwright browsers
         run: pnpm exec playwright install --with-deps
-      - name: Run Playwright tests
-        run: pnpm exec playwright test
+      - name: Run Playwright
+        run: pnpm run test:e2e
+        env: ${{ secrets }}
       - uses: actions/upload-artifact@v3
         if: always()
         with:
