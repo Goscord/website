@@ -25,7 +25,11 @@ export function Navbar(): ReactElement {
         "h-96 flex flex-col gap-3",
         "transition-[max-height] duration-300",
         {
-          "max-h-96": burgerOpen,
+          // Warning: this value is hardcoded,
+          // it is not possible to make maxHeight responsive
+          // to content without breaking the desired behavior:
+          "max-h-48": burgerOpen,
+
           "max-h-0 overflow-hidden": !burgerOpen
         }
       )}>
