@@ -45,3 +45,8 @@ __old__
 
 # IDE
 .vscode/settings.json
+
+# End-to-end
+/test-results/
+/playwright-report/
+/playwright/.cache/
