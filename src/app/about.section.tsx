@@ -1,5 +1,5 @@
-import { Promote } from "#/lib/components/promote";
-import { Text } from "#/lib/components/text";
+import { Promote } from "#/lib/components/molecules/promote";
+import { Text } from "#/lib/components/atoms/text";
 import { promotes } from "#/lib/configs/promote";
 import { ReactElement } from "react";
 

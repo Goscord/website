@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import * as HoverCard from "@radix-ui/react-hover-card";
 import { TooltipProps } from "./tooltip.type";
-import { Text } from "../text";
+import { Text } from "#/lib/components/atoms/text";
 
 export function Tooltip({ text, children }: TooltipProps): ReactElement {
   return (

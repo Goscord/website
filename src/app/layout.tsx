@@ -1,7 +1,7 @@
 import "#/lib/styles/reset.css";
 import "#/lib/styles/font.css";
 import "#/lib/styles/tailwind.css";
-import { Navbar } from "#/lib/components/navbar/navbar";
+import { Navbar } from "#/lib/components/layouts/navbar";
 import { PropsWithChildren, ReactElement } from "react";
 import { Provider } from "./provider";
 import { Metadata } from "next";
