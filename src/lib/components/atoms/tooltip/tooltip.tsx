@@ -5,7 +5,7 @@ import { Text } from "#/lib/components/atoms/text";
 
 export function Tooltip({ text, children }: TooltipProps): ReactElement {
   return (
-    <div>
+    <div className="w-fit">
       <HoverCard.Root>
         <HoverCard.Trigger>
           <div>{children}</div>
