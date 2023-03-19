@@ -1,6 +1,6 @@
 "use client";
 
-import { Notification } from "#/lib/components/notification";
+import { Notification } from "#/lib/components/molecules/notification";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { PropsWithChildren, ReactElement } from "react";
 
