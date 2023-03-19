@@ -21,14 +21,14 @@ export function Code({ code, language }: CodeProps): ReactElement {
   });
 
   return (
-    <div className="rounded shadow relative">
+    <div className="relative">
       <span className="absolute top-4 right-4">
         <Tooltip text="Copy to clipboard!">
           <FiCopy className="text-white text-xl brightness-75 hover:brightness-100 active:scale-95" onClick={() => copyToClipboard()} />
         </Tooltip>
       </span>
 
-      <pre>
+      <pre className="rounded shadow">
         <code className={`language-${language}`}>{code}</code>
       </pre>
     </div>
