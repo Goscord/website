@@ -11,7 +11,7 @@ export function HeaderSection(): ReactElement {
 
       <Text size="2xl" className="text-center">A powerful Discord API in Golang.</Text>
 
-      <GoGetButton />
+      <GoGetButton size="large" />
     </header>
   );
 }
