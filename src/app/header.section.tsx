@@ -21,7 +21,7 @@ export function HeaderSection(): ReactElement {
     <header className="bg-gray py-20 flex justify-center items-center flex-col gap-5">
       <Image src={goscordBrand} alt="Goscord brand" className="sm:w-11/12 w-10/12 max-w-5xl" />
 
-      <Text size="2xl">A powerful Discord API in Golang.</Text>
+      <Text size="2xl" className="text-center">A powerful Discord API in Golang.</Text>
 
       <Tooltip text="Copy to clipboard!">
         <Button size="large" icon={<FiCopy />} onClick={() => copyToClipboard()}>
