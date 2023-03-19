@@ -1,0 +1,1 @@
+export { promotes } from "./promote.config";
