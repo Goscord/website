@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import { Text } from "#/lib/components/text";
+import { Text } from "#/lib/components/atoms/text";
 import Link from "next/link";
 
 export default function Documentation(): ReactElement {

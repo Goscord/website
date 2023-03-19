@@ -3,8 +3,8 @@
 import { ReactElement, useState } from "react";
 import { navbarPages } from "#/lib/configs/navbar";
 import { NavbarItem } from "./navbav-item";
-import { Theme } from "#/lib/components/theme";
-import { Burger } from "#/lib/components/burger";
+import { Theme } from "#/lib/components/molecules/theme";
+import { Burger } from "#/lib/components/molecules/burger";
 import { clsx } from "clsx";
 import { useMediaQuery } from "#/lib/hooks/media-query";
 
