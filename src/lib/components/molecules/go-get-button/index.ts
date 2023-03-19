@@ -1,0 +1,1 @@
+export { GoGetButton } from "./go-get-button";
