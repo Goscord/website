@@ -5,6 +5,7 @@ export const goscord = {
   },
   github: {
     mainRepo: "Goscord/goscord",
-    mainRepoUrl: "https://github.com/Goscord/goscord"
+    mainRepoUrl: "https://github.com/Goscord/goscord",
+    install: "go get github.com/Goscord/goscord"
   }
 };
