@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import { NavbarItemProps } from "./navbar.type";
 import { FiExternalLink } from "react-icons/fi";
-import { Text } from "#/lib/components/text";
+import { Text } from "#/lib/components/atoms/text";
 import { clsx } from "clsx";
 import { usePathname } from "next/navigation";
 import Link from "next/link";

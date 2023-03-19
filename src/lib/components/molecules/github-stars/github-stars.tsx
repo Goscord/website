@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import { Text } from "#/lib/components/text";
+import { Text } from "#/lib/components/atoms/text";
 import { useQuery } from "@tanstack/react-query";
 import { getGithubStars } from "#/lib/utils/github";
 import { FiGithub } from "react-icons/fi";
