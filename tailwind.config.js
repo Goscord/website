@@ -55,6 +55,21 @@ module.exports = {
     extend: {
       backgroundImage: {
         "setup-section": "url('/backgrounds/setup-section.svg')"
+      },
+
+      animation: {
+        "from-top": "from-top 0.5s ease-in",
+        "from-bottom": "from-bottom 0.5s ease-in"
+      },
+      keyframes: {
+        "from-top": {
+          "0%": { transform: "translateY(-50px)", opacity: "0" },
+          "100%": { transform: "translateY(0%)", opacity: "1" }
+        },
+        "from-bottom": {
+          "0%": { transform: "translateY(50px)", opacity: "0" },
+          "100%": { transform: "translateY(0%)", opacity: "1" }
+        }
       }
     }
   },
