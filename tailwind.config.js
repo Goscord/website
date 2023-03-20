@@ -58,8 +58,8 @@ module.exports = {
       },
 
       animation: {
-        "from-top": "from-top 0.5s ease-in",
-        "from-bottom": "from-bottom 0.5s ease-in"
+        "from-top": "from-top 0.5s ease-out",
+        "from-bottom": "from-bottom 0.5s ease-out"
       },
       keyframes: {
         "from-top": {
