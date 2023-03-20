@@ -7,11 +7,11 @@ import goscordBrand from "~/goscord-brand.png";
 export function HeaderSection(): ReactElement {
   return (
     <header className="bg-gray py-20 flex justify-center items-center flex-col gap-5">
-      <Image src={goscordBrand} alt="Goscord brand" className="sm:w-11/12 w-10/12 max-w-5xl" />
+      <Image src={goscordBrand} alt="Goscord brand" className="sm:w-11/12 w-10/12 max-w-5xl animate-from-top" />
 
-      <Text size="2xl" className="text-center">A powerful Discord API in Golang.</Text>
+      <Text size="2xl" className="text-center animate-from-top">A powerful Discord API in Golang.</Text>
 
-      <GoGetButton size="large" />
+      <GoGetButton size="large" className="animate-from-bottom" />
     </header>
   );
 }
