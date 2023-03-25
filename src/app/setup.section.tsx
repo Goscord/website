@@ -19,15 +19,15 @@ export function SetupSection(): ReactElement {
           <GoGetButton />
 
           <Text size="xl">
-          That{"'"}s it, now you can copy the following example and start creating your Discord bot!
-          You can also discover more possibilities on our documentation.
+            That{"'"}s it, now you can copy the following example and start creating your Discord bot!
+            You can also discover more possibilities on our documentation.
           </Text>
 
           <LinkButton href="/documentation" icon={<FiBook />}>See documentation</LinkButton>
 
           <Text size="xl">
-          Join our Discord community to connect with other Goscord users and developers.
-          Click the Discord button below to join our server and get help from our friendly members.
+            Join our Discord community to connect with other Goscord users and developers.
+            Click the Discord button below to join our server and get help from our friendly members.
           </Text>
 
           <LinkButton href="/discord" target="_blank" icon={<BsDiscord />}>Join our Discord</LinkButton>
