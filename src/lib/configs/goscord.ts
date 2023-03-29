@@ -4,7 +4,8 @@ export const goscord = {
     url: "https://goscord.dev"
   },
   github: {
-    mainRepo: "Goscord/goscord",
+    owner: "Goscord",
+    repo: "goscord",
     mainRepoUrl: "https://github.com/Goscord/goscord",
     install: "go get github.com/Goscord/goscord"
   }
