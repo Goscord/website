@@ -7,7 +7,7 @@ export default {
 
   theme: {
     fontFamily: {
-      "sans": ["Yantramanav", "sans-serif"]
+      "sans": ["Inter", "sans-serif"]
     },
 
     colors: {
