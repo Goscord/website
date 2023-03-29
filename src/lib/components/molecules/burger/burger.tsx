@@ -21,7 +21,7 @@ export function Burger({ open, setOpen, className, ...props }: BurgerProps): Rea
       className={clsx(
         "p-4 rounded cursor-pointer",
         "transition-colors duration-300",
-        "hover:bg-primary-1",
+        "hover:bg-primary-2",
         className
       )}
       onClick={() => setOpen(state => !state)}

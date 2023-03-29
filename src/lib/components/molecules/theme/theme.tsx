@@ -11,7 +11,7 @@ export function Theme(): ReactElement {
     <Text size="2xl" onClick={() => toggleTheme()} className={clsx(
       "p-4 rounded cursor-pointer",
       "transition-colors duration-300",
-      "hover:bg-primary-1"
+      "hover:bg-primary-2"
     )}>
       {theme === "light" ? <FiSun /> : <FiMoon />}
     </Text>

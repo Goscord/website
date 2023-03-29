@@ -17,8 +17,8 @@ export function NavbarItem({ label, href, external = false, ...props }: NavbarIt
         "transition-colors duration-300",
         {
           "flex items-center gap-2": external,
-          "bg-primary-1": isActive,
-          "hover:bg-primary-1": !isActive
+          "bg-primary-2": isActive,
+          "hover:bg-primary-2": !isActive
         }
       )}>
         {label}
