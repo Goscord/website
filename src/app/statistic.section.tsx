@@ -1,8 +1,8 @@
+import type { ReactElement } from "react";
 import { Text } from "#/lib/components/atoms/text";
 import { Statistic } from "#/lib/components/molecules/statistic";
 import { goscord } from "#/lib/configs/goscord";
 import { getGitHubStars, getGitHubClone } from "#/lib/utils/github";
-import { ReactElement } from "react";
 import { FiBarChart, FiGithub } from "react-icons/fi";
 
 export async function StatisticSection(): Promise<ReactElement> {
