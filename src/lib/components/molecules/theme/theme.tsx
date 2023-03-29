@@ -5,10 +5,10 @@ import { useThemeStore } from "#/lib/stores/theme";
 import { clsx } from "clsx";
 
 export function Theme(): ReactElement {
-  const { theme, switchTheme } = useThemeStore();
+  const { theme, toggleTheme } = useThemeStore();
 
   return (
-    <Text size="2xl" onClick={() => switchTheme()} className={clsx(
+    <Text size="2xl" onClick={() => toggleTheme()} className={clsx(
       "p-4 rounded cursor-pointer",
       "transition-colors duration-300",
       "hover:bg-primary-1"
