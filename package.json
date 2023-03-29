@@ -6,7 +6,8 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "test:unit": "vitest --ui"
   },
   "dependencies": {
     "@radix-ui/react-hover-card": "^1.0.5",
@@ -28,13 +29,15 @@
     "@types/prismjs": "^1.26.0",
     "@types/react": "18.0.31",
     "@types/react-dom": "18.0.11",
+    "@vitest/ui": "^0.29.8",
     "autoprefixer": "^10.4.14",
     "dotenv": "^16.0.3",
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.3.0",
-    "typescript": "5.0.2"
+    "typescript": "5.0.2",
+    "vitest": "^0.29.8"
   },
   "eslintConfig": {
     "extends": [
