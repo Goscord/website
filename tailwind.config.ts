@@ -1,8 +1,10 @@
-/** @type {import("tailwindcss").Config} */
-module.exports = {
+import type { Config } from "tailwindcss";
+
+export default {
   content: [
     "./src/**/*.{js,ts,jsx,tsx}"
   ],
+
   theme: {
     fontFamily: {
       "sans": ["Yantramanav", "sans-serif"]
@@ -31,7 +33,7 @@ module.exports = {
       "lg": "1.125rem",
       "xl": "1.25rem",
       "2xl": "1.5rem",
-      "3xl": ["2rem", { lineHeight: 1 }]
+      "3xl": ["2rem", { lineHeight: "1" }]
     },
 
     screens: {
@@ -74,4 +76,4 @@ module.exports = {
     }
   },
   plugins: []
-};
+} satisfies Config;
