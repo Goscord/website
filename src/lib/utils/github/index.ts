@@ -1,1 +1,1 @@
-export { getGithubStars, getGithubClone } from "./github.util";
+export { getGitHubStars, getGitHubClone } from "./github.util";
