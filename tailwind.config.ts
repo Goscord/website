@@ -18,7 +18,8 @@ export default {
 
       "primary": {
         DEFAULT: "#5AA469",
-        2: "#4a8c5a"
+        2: "#4a8c5a",
+        3: "#EAFFF2"
       },
 
       "gray": "#23272a"
@@ -42,8 +43,9 @@ export default {
     },
 
     borderRadius: {
-      DEFAULT: "0.25rem",
       none: "0",
+      DEFAULT: "0.25rem",
+      lg: "1.25rem",
       full: "9999px"
     },
 
