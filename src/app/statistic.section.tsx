@@ -10,8 +10,8 @@ export async function StatisticSection(): Promise<ReactElement> {
   const cloneCount = await getGitHubClone(goscord.github.owner, goscord.github.repo);
 
   return (
-    <section className="flex items-center justify-center flex-col gap-8 mb-32">
-      <Text color="primary" size="3xl">Want some Goscord stats?</Text>
+    <section className="flex items-center justify-center flex-col gap-8 mt-5 mb-14">
+      <Text color="primary" size="3xl" className="font-bold">Want some Goscord stats?</Text>
 
       <div className="flex items-center gap-20 flex-wrap">
         <Statistic icon={<FiGithub />} text="GitHub stars" count={starsCount} />
