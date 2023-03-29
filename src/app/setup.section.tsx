@@ -3,10 +3,11 @@ import { Code } from "#/lib/components/atoms/code";
 import { Text } from "#/lib/components/atoms/text";
 import { GoGetButton } from "#/lib/components/molecules/go-get-button";
 import { codeExample } from "#/lib/configs/code-example";
-import { clsx } from "clsx";
 import { ReactElement } from "react";
 import { BsDiscord } from "react-icons/bs";
 import { FiBook } from "react-icons/fi";
+import Image from "next/image";
+import triangleShape from "~/shapes/gray-triangle.png";
 
 export function SetupSection(): ReactElement {
   return (
@@ -38,11 +39,7 @@ export function SetupSection(): ReactElement {
         </div>
       </div>
 
-      <div className={clsx(
-        "border-l-[100vw] border-l-transparent",
-        "border-b-[100px] border-b-transparent",
-        "border-t-[100px] border-t-gray"
-      )} />
+      <Image src={triangleShape} alt="triangle shape" className="w-full" />
     </section>
   );
 }
