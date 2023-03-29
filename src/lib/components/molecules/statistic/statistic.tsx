@@ -4,10 +4,8 @@ import { StatisticProps } from "./statistic.type";
 
 export function Statistic({ icon, count, text }: StatisticProps): ReactElement {
   return (
-    <div>
-      <Text size="large" color="black">
-        {icon} {count || "..."} {text}
-      </Text>
-    </div>
+    <Text size="2xl" color="black" className="flex gap-2 items-center">
+      {icon} {count || "..."} {text}
+    </Text>
   );
 }
