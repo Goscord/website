@@ -18,12 +18,12 @@ export default {
 
       "primary": {
         DEFAULT: "#5AA469",
-        1: "#4a8c5a"
+        2: "#4a8c5a"
       },
 
       "gray": {
         DEFAULT: "#23272a",
-        1: "#2c2f33"
+        2: "#2c2f33"
       }
     },
 
