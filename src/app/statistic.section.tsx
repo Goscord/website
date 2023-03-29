@@ -10,7 +10,7 @@ export async function StatisticSection(): Promise<ReactElement> {
   const cloneCount = await getGitHubClone(goscord.github.owner, goscord.github.repo);
 
   return (
-    <section className="flex items-center justify-center flex-col gap-8">
+    <section className="flex items-center justify-center flex-col gap-8 mb-32">
       <Text color="primary" size="3xl">Want some Goscord stats?</Text>
 
       <div className="flex items-center gap-20 flex-wrap">
