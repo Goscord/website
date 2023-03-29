@@ -10,3 +10,10 @@ export type TeamCardProps = {
   githubLink?: string;
   websiteLink?: string;
 }
+
+export type TeamMemberLinkType = "twitter" | "github" | "website";
+
+export type TeamMemberLink = {
+  link: string;
+  type: TeamMemberLinkType;
+}
