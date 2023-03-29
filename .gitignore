@@ -43,10 +43,14 @@ package-lock.json
 # old files
 __old__
 
-# IDE
+# ide
 .vscode/settings.json
+.idea
 
-# End-to-end
+# end-to-end
 /test-results/
 /playwright-report/
 /playwright/.cache/
+
+# environment variables
+.env
