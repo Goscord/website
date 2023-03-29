@@ -6,7 +6,7 @@ import { ReactElement } from "react";
 export function AboutSection(): ReactElement {
   return (
     <section className="py-20 flex justify-center items-center flex-col gap-10">
-      <Text color="primary" size="3xl">What is Goscord?</Text>
+      <Text color="primary" size="3xl" className="font-bold">What is Goscord?</Text>
 
       <Text color="black" size="xl" className="text-center w-11/12 max-w-4xl">
         Goscord is a Discord bot creation API written in the Go programming language.
