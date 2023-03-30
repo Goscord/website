@@ -20,7 +20,7 @@ export function FooterSection(): ReactElement {
           - Made with ❤️ by the Goscord team
         </Text>
 
-        <div className="flex items-center gap-8 sm:justify-center">
+        <div className="flex items-center gap-8 lg:justify-center">
           <Link href={goscord.github.mainRepoUrl} target="_blank">
             <BsGithub className={clsx("text-xl", mediaStyles)} />
           </Link>
@@ -31,7 +31,7 @@ export function FooterSection(): ReactElement {
         </div>
       </div>
 
-      <div className="flex gap-28 sm:flex-col">
+      <div className="flex gap-28 sm:flex-col sm:gap-14">
         {footerLinks.map(group => (
           <div key={group.title} className="space-y-3">
             <Text color="gray-3">{group.title}</Text>
