@@ -11,7 +11,7 @@ export function TeamCard({ img, name, description, githubLink, twitterLink, webs
 
       <div className="flex flex-col gap-1">
         <Text color="gray" size="xl">{name}</Text>
-        <Text color="black" size="2xl" className="font-bold">{description}</Text>
+        <Text color="black" size="xl" className="font-bold">{description}</Text>
 
         <div className="flex gap-3 text-xl my-1">
           {githubLink && <TeamMemberLink link={githubLink} type="github" />}
