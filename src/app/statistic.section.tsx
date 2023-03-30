@@ -5,7 +5,8 @@ import { goscord } from "#/lib/configs/goscord";
 import { getGitHubStars, getGitHubClone } from "#/lib/utils/github";
 import { FiBarChart, FiGithub } from "react-icons/fi";
 import Image from "next/image";
-import triangleShape from "~/shapes/gray-triangle.png";
+import triangle from "~/shapes/gray-triangle.png";
+import triangleRotate from "~/shapes/gray-triangle-180.png";
 
 export async function StatisticSection(): Promise<ReactElement> {
   const starsCount = await getGitHubStars(goscord.github.owner, goscord.github.repo);
@@ -13,7 +14,7 @@ export async function StatisticSection(): Promise<ReactElement> {
 
   return (
     <>
-      <Image src={triangleShape} alt="triangle shape" />
+      <Image src={triangle} alt="triangle shape" className="w-full" />
 
       <section className="flex items-center justify-center flex-col gap-10 my-14">
         <Text color="primary" size="3xl" className="font-bold text-center">Want some Goscord stats?</Text>
@@ -24,7 +25,7 @@ export async function StatisticSection(): Promise<ReactElement> {
         </div>
       </section>
 
-      <Image src={triangleShape} alt="triangle shape" className="rotate-180" />
+      <Image src={triangleRotate} alt="triangle shape" className="w-full" />
     </>
   );
 }
