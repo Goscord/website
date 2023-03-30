@@ -23,7 +23,10 @@ export default {
         3: "#EAFFF2"
       },
 
-      "gray": "#23272a"
+      "gray": {
+        DEFAULT: "#23272a",
+        2: "#8A8F98"
+      }
     },
 
     fontSize: {
