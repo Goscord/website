@@ -3,6 +3,9 @@ export const goscord = {
     domain: "goscord.dev",
     url: "https://goscord.dev"
   },
+  discord: {
+    url: "/discord"
+  },
   github: {
     owner: "Goscord",
     repo: "goscord",
