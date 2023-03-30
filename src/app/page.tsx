@@ -4,6 +4,7 @@ import { AboutSection } from "./about.section";
 import { SetupSection } from "./setup.section";
 import { StatisticSection } from "./statistic.section";
 import { TeamSection } from "./team.section";
+import { FooterSection } from "./footer.section";
 
 export default function Home(): ReactElement {
   return (
@@ -19,6 +20,8 @@ export default function Home(): ReactElement {
       <StatisticSection />
 
       <TeamSection />
+
+      <FooterSection />
     </>
   );
 }
