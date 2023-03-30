@@ -11,7 +11,8 @@ export function HeaderSection(): ReactElement {
 
       <Text size="2xl" className="text-center animate-from-top">A powerful Discord API in Golang.</Text>
 
-      <GoGetButton size="large" className="animate-from-bottom" />
+      <GoGetButton size="large" className="animate-from-bottom sm:hidden" />
+      <GoGetButton size="base" className="animate-from-bottom hidden sm:flex" />
     </header>
   );
 }
