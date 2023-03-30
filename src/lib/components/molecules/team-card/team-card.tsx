@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export function TeamCard({ img, name, description, githubLink, twitterLink, websiteLink }: TeamCardProps): ReactElement {
   return (
-    <div className="bg-primary-3 py-4 px-6 rounded-lg shadow flex gap-8 items-center">
+    <div className="bg-primary-3 py-4 px-6 rounded-lg shadow flex gap-8 items-center w-96 sm:w-11/12">
       <Image src={img} alt={`${name} profile picture`} className="h-32 w-32 rounded-lg" />
 
       <div className="flex flex-col gap-1">
