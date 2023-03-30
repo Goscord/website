@@ -6,8 +6,9 @@ import { Button, ButtonProps } from "#/lib/components/atoms/button";
 import { FiCopy } from "react-icons/fi";
 import { goscord } from "#/lib/configs/goscord";
 import { toast } from "sonner";
+import { clsx } from "clsx";
 
-export function GoGetButton({ ...props }: ButtonProps): ReactElement {
+export function GoGetButton({ className, ...props }: ButtonProps): ReactElement {
   const copyToClipboard = (): void => {
     navigator.clipboard.writeText(goscord.github.install);
 
@@ -16,7 +17,7 @@ export function GoGetButton({ ...props }: ButtonProps): ReactElement {
 
   return (
     <Tooltip text="Copy to clipboard!">
-      <Button icon={<FiCopy />} onClick={() => copyToClipboard()} {...props}>
+      <Button icon={<FiCopy />} onClick={() => copyToClipboard()} className={clsx("font-mono", className)} {...props}>
         {goscord.github.install}
       </Button>
     </Tooltip>
