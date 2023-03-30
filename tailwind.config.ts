@@ -7,7 +7,8 @@ export default {
 
   theme: {
     fontFamily: {
-      "sans": ["Inter", "sans-serif"]
+      "sans": ["var(--font-inter)"],
+      "mono": ["var-(--font-roboto-mono)"]
     },
 
     colors: {
