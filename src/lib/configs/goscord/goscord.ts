@@ -9,6 +9,7 @@ export const goscord = {
   github: {
     owner: "Goscord",
     repo: "goscord",
+    organizationUrl: "https://github.com/Goscord",
     mainRepoUrl: "https://github.com/Goscord/goscord",
     websiteRepoUrl: "https://github.com/Goscord/website",
     botRepoUrl: "https://github.com/Goscord/bot",
