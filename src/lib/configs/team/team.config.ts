@@ -14,7 +14,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     img: szeroki,
-    name: "szeroki", // eslint-disable-line no-use-before-define
+    name: "szeroki",
     description: "API Developer",
     twitterLink: "https://twitter.com/szerookii___",
     githubLink: "https://github.com/szerookii",
