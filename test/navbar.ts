@@ -5,7 +5,9 @@ test("navbar elements", async({ page }) => {
   await page.goto("/");
 
   // Open burger menu (if is mobile device):
-  if (page.viewportSize()?.width === devices["iPhone XR"].viewport.width) {
+  const pageWidth = page.viewportSize()?.width;
+
+  if (pageWidth && pageWidth <= devices["iPhone XR"].viewport.width) {
     await page.click("#burger");
   }
 
