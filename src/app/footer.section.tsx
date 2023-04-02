@@ -34,7 +34,7 @@ export function FooterSection(): ReactElement {
       <div className="flex gap-28 sm:flex-col sm:gap-14">
         {footerLinks.map(group => (
           <div key={group.title} className="space-y-3">
-            <Text color="gray-3">{group.title}</Text>
+            <Text color="gray-3" type="h3">{group.title}</Text>
 
             {group.links.map(link => (
               <Text
