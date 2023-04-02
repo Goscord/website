@@ -1,15 +1,11 @@
 import { navbarPages } from "#/lib/configs/navbar";
-import { test, expect, devices } from "@playwright/test";
+import { test, expect } from "@playwright/test";
 
-test("navbar elements", async({ page }) => {
+test("navbar elements", async({ page, isMobile }) => {
   await page.goto("/");
 
   // Open burger menu (if is mobile device):
-  const pageWidth = page.viewportSize()?.width;
-
-  if (pageWidth && pageWidth <= devices["iPhone XR"].viewport.width) {
-    await page.click("#burger");
-  }
+  if (isMobile) await page.click("#burger");
 
   // Check if navbar page button are visible and have the right link:
   const navbar = page.getByRole("navigation");
