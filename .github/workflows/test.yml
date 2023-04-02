@@ -18,9 +18,10 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Install Playwright browsers
-        run: npx playwright install
+        run: npx playwright install --with-deps
       - name: Run Playwright
-        run: npm run test:e2e
+        # run: npm run test:e2e
+        run: npx playwright test
         env: ${{ secrets }}
       - uses: actions/upload-artifact@v3
         if: always()
