@@ -20,12 +20,12 @@ export function FooterSection(): ReactElement {
           - Made with ❤️ by the Goscord team
         </Text>
 
-        <div id="social-icons" className="flex items-center gap-8 lg:justify-center">
-          <Link href={goscord.github.mainRepoUrl} target="_blank">
+        <div className="flex items-center gap-8 lg:justify-center">
+          <Link id="github-link-icon" href={goscord.github.mainRepoUrl} target="_blank">
             <BsGithub className={clsx("text-xl", mediaStyles)} />
           </Link>
 
-          <Link href={goscord.discord.url} target="_blank">
+          <Link id="discord-link-icon" href={goscord.discord.url} target="_blank">
             <BsDiscord className={clsx("text-2xl", mediaStyles)} />
           </Link>
         </div>
