@@ -8,6 +8,7 @@ const baseURL = `http://localhost:${port}`;
 // Playwright config:
 export default defineConfig({
   testDir: "./test",
+  testMatch: "*.ts",
 
   timeout: 30 * 1000,
 
@@ -30,15 +31,13 @@ export default defineConfig({
       name: "desktop",
       use: {
         ...devices["Desktop Chrome"]
-      },
-      testMatch: /.*\/[A-z]+\.(desktop\.)?ts/
+      }
     },
     {
       name: "mobile",
       use: {
         ...devices["iPhone XR"]
-      },
-      testMatch: /.*\/[A-z]+\.(mobile\.)?ts/
+      }
     }
   ]
 });
