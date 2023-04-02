@@ -7,7 +7,7 @@ test("copy \"go get\" command to clipboard from button", async({ page }, { proje
   const header = page.locator("header");
   const button = header.getByRole("button", { name: goscord.github.install });
 
-  await button.click({ force: true });
+  await button.click({ position: { x: 10, y: 10 } }); // define position to bypass button animation
 
   if (project.name !== "chromium") return;
 
