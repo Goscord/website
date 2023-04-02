@@ -3,6 +3,7 @@ import { copyToClipboard } from "./clipboard.util";
 
 describe("copyToClipboard", () => {
   beforeEach(() => {
+    // Mock clipboard API:
     let clipboard = "";
 
     Object.assign(navigator, {
