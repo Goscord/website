@@ -16,8 +16,6 @@ test("footer right sections", async({ page }) => {
 
       expect(link).toBeVisible();
 
-      await link.click();
-
       const href = await link.getAttribute("href");
       const target = await link.getAttribute("target");
 
