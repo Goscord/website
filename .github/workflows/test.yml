@@ -20,8 +20,7 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
       - name: Run Playwright
-        # run: npm run test:e2e
-        run: npx playwright test
+        run: npm run test:e2e
         env: ${{ secrets }}
       - uses: actions/upload-artifact@v3
         if: always()
