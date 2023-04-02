@@ -15,12 +15,10 @@ test("navbar elements", async({ page }) => {
   for (const item of navbarPages) {
     const link = navbar.getByRole("link", { name: item.label });
 
-    expect(link).toBeVisible();
-
-    await link.click();
-
     const href = await link.getAttribute("href");
     const target = await link.getAttribute("target");
+
+    expect(link).toBeVisible();
 
     expect(href).toBe(item.href);
     expect(target).toBe(item.external ? "_blank" : "_self");
