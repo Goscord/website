@@ -16,11 +16,11 @@ jobs:
       - uses: actions/setup-node@v3
       - uses: actions/checkout@v3
       - name: Install dependencies
-        run: yarn install
+        run: npm install
       - name: Install Playwright browsers
-        run: yarn playwright install --with-deps
+        run: npx playwright install --with-deps
       - name: Run Playwright
-        run: yarn run test:e2e
+        run: npm run test:e2e
         env: ${{ secrets }}
       - uses: actions/upload-artifact@v3
         if: always()
