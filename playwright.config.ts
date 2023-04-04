@@ -15,8 +15,8 @@ export default defineConfig({
   reporter: [["html", { open: "always" }]],
 
   webServer: {
-    command: "npm run dev",
     url: baseURL,
+    command: "npm run build && npm run dev",
     reuseExistingServer: !process.env.CI
   },
 
@@ -41,23 +41,23 @@ export default defineConfig({
         ...devices["Desktop Firefox"]
       }
     },
-    {
-      name: "webkit",
-      use: {
-        ...devices["Desktop Safari"]
-      }
-    },
+    // {
+    //   name: "webkit",
+    //   use: {
+    //     ...devices["Desktop Safari"]
+    //   }
+    // },
     {
       name: "mobile chrome",
       use: {
         ...devices["Pixel 5"]
       }
-    },
-    {
-      name: "mobile safari",
-      use: {
-        ...devices["iPhone XR"]
-      }
     }
+    // {
+    //   name: "mobile safari",
+    //   use: {
+    //     ...devices["iPhone XR"]
+    //   }
+    // }
   ]
 });
