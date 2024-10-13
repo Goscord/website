@@ -36,7 +36,6 @@ yarn-error.log*
 
 # lock
 yarn.lock
-pnpm-lock.yaml
 package-lock.json
 
 # old files
