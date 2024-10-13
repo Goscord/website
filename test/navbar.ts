@@ -16,7 +16,7 @@ test("navbar elements", async({ page, isMobile }) => {
     const href = await link.getAttribute("href");
     const target = await link.getAttribute("target");
 
-    expect(link).toBeVisible();
+    await expect(link).toBeVisible();
 
     expect(href).toBe(item.href);
     expect(target).toBe(item.external ? "_blank" : "_self");

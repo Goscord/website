@@ -13,7 +13,7 @@ test.describe("footer left link icons", () => {
       target: await github.getAttribute("target")
     };
 
-    expect(github).toBeVisible();
+    await expect(github).toBeVisible();
     expect(githubAttributes.href).toBe(goscord.github.mainRepoUrl);
     expect(githubAttributes.target).toBe("_blank");
 
@@ -31,7 +31,7 @@ test.describe("footer left link icons", () => {
       target: await discord.getAttribute("target")
     };
 
-    expect(discord).toBeVisible();
+    await expect(discord).toBeVisible();
     expect(discordAttributes.href).toBe(goscord.discord.url);
     expect(discordAttributes.target).toBe("_blank");
 

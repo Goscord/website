@@ -9,12 +9,12 @@ test.describe("footer right sections", () => {
 
     const title = footer.getByRole("heading", { name: section.title });
 
-    expect(title).toBeVisible();
+    await expect(title).toBeVisible();
 
     for (const item of section.links) {
       const link = footer.getByRole("link", { name: item.name });
 
-      expect(link).toBeVisible();
+      await expect(link).toBeVisible();
 
       const href = await link.getAttribute("href");
       const target = await link.getAttribute("target");
