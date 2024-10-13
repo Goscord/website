@@ -7,7 +7,5 @@ export const metadata: Metadata = {
     "It offers a high level API rich in possibilities and which evolves at the same pace as Discord."
   ].join(" "),
 
-  themeColor: "#5aa469",
-
   icons: "/goscord.png"
 };
