@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { UseMediaQueryProps, UseMediaQueryResult } from "./media-query.type";
+import type { UseMediaQueryProps, UseMediaQueryResult } from "./media-query.type";
 
 export function useMediaQuery(query: UseMediaQueryProps): UseMediaQueryResult {
   const [match, setMatch] = useState<UseMediaQueryResult>("loading");

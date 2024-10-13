@@ -1,5 +1,5 @@
 import { Text } from "#/lib/components/atoms/text";
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 import { BsDiscord, BsGithub } from "react-icons/bs";
 import { goscord } from "#/lib/configs/goscord";
 import { clsx } from "clsx";

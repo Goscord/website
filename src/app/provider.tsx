@@ -2,7 +2,7 @@
 
 import { Notification } from "#/lib/components/molecules/notification";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { PropsWithChildren, ReactElement } from "react";
+import type { PropsWithChildren, ReactElement } from "react";
 
 const queryClient = new QueryClient();
 

@@ -1,5 +1,5 @@
 import { FiBarChart, FiHeart, FiMonitor, FiZap } from "react-icons/fi";
-import { Promote } from "./promote.type";
+import type { Promote } from "./promote.type";
 
 export const promotes: Promote[] = [
   {

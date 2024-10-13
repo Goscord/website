@@ -1,6 +1,6 @@
 import { TeamCard } from "#/lib/components/molecules/team-card";
 import { teamMembers } from "#/lib/configs/team";
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 
 export function TeamSection(): ReactElement {
   return (

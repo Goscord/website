@@ -1,5 +1,5 @@
-import { ReactElement } from "react";
-import { LinkButtonProps } from "./button.type";
+import type { ReactElement } from "react";
+import type { LinkButtonProps } from "./button.type";
 import { clsx } from "clsx";
 import Link from "next/link";
 

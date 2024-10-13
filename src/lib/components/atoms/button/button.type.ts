@@ -1,4 +1,4 @@
-import { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactElement } from "react";
+import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactElement } from "react";
 
 export type ButtonSize = "small" | "base" | "large";
 

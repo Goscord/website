@@ -1,5 +1,5 @@
 import { goscord } from "#/lib/configs/goscord";
-import { NavbarItem } from "./navbar.type";
+import type { NavbarItem } from "./navbar.type";
 
 export const navbarPages: NavbarItem[] = [
   { label: goscord.webiste.domain, href: "/" },

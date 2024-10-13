@@ -1,6 +1,6 @@
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 import { Text } from "#/lib/components/atoms/text";
-import { StatisticProps } from "./statistic.type";
+import type { StatisticProps } from "./statistic.type";
 
 export function Statistic({ icon, count, text }: StatisticProps): ReactElement {
   return (

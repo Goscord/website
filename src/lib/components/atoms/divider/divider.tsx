@@ -1,5 +1,5 @@
 import type { ReactElement } from "react";
-import { DividerProps } from "./divider.type";
+import type { DividerProps } from "./divider.type";
 import { clsx } from "clsx";
 
 export function Divider({ className, ...props }: DividerProps): ReactElement {

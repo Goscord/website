@@ -1,5 +1,5 @@
-import { ReactElement } from "react";
-import { ButtonProps } from "./button.type";
+import type { ReactElement } from "react";
+import type { ButtonProps } from "./button.type";
 import { clsx } from "clsx";
 
 export function Button({ size = "base", icon, fullWidth = false, className, children, ...props }: ButtonProps): ReactElement {

@@ -1,8 +1,9 @@
 import { clsx } from "clsx";
 import { usePathname } from "next/navigation";
-import { ReactElement, useEffect } from "react";
+import type { ReactElement } from "react";
+import { useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-import { BurgerProps } from "./burger.type";
+import type { BurgerProps } from "./burger.type";
 
 export function Burger({ open, setOpen, className, ...props }: BurgerProps): ReactElement {
   // Close the burger menu when the user navigates to a new page:

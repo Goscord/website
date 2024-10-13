@@ -1,5 +1,5 @@
-import { ReactElement } from "react";
-import { TeamCardProps } from "./team-card.type";
+import type { ReactElement } from "react";
+import type { TeamCardProps } from "./team-card.type";
 import { Text } from "#/lib/components/atoms/text";
 import { TeamMemberLink } from "./team-member-link";
 import Image from "next/image";

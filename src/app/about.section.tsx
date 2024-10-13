@@ -1,7 +1,7 @@
 import { Promote } from "#/lib/components/molecules/promote";
 import { Text } from "#/lib/components/atoms/text";
 import { promotes } from "#/lib/configs/promote";
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 
 export function AboutSection(): ReactElement {
   return (

@@ -3,7 +3,7 @@ import { Code } from "#/lib/components/atoms/code";
 import { Text } from "#/lib/components/atoms/text";
 import { GoGetButton } from "#/lib/components/molecules/go-get-button";
 import { codeExample } from "#/lib/configs/code-example";
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 import { BsDiscord } from "react-icons/bs";
 import { FiBook } from "react-icons/fi";
 

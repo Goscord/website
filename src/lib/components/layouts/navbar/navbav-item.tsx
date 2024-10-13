@@ -1,5 +1,5 @@
-import { ReactElement } from "react";
-import { NavbarItemProps } from "./navbar.type";
+import type { ReactElement } from "react";
+import type { NavbarItemProps } from "./navbar.type";
 import { FiExternalLink } from "react-icons/fi";
 import { Text } from "#/lib/components/atoms/text";
 import { clsx } from "clsx";

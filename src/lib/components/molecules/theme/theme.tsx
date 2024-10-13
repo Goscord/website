@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 import { Text } from "#/lib/components/atoms/text";
 import { FiSun, FiMoon } from "react-icons/fi";
 import { useThemeStore } from "#/lib/stores/theme";

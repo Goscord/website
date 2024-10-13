@@ -1,6 +1,6 @@
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 import { Text } from "#/lib/components/atoms/text";
-import { PromoteProps } from "./promote.type";
+import type { PromoteProps } from "./promote.type";
 
 export function Promote({ icon, title, description }: PromoteProps): ReactElement {
   return (

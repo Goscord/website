@@ -1,5 +1,5 @@
 import { goscord } from "#/lib/configs/goscord";
-import { FooterLinks } from "./footer.type";
+import type { FooterLinks } from "./footer.type";
 
 export const footerLinks: FooterLinks[] = [
   {
