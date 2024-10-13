@@ -6,7 +6,7 @@ WORKDIR /app
 RUN corepack enable
 
 # Install dependencies:
-COPY ./package.json ./pnpm-lock.yaml./
+COPY ./package.json ./pnpm-lock.yaml ./
 
 RUN pnpm install --frozen-lockfile
 
