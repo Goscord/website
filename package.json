@@ -46,5 +46,12 @@
       "@bluzzi",
       "next/core-web-vitals"
     ]
+  },
+  "packageManager": "pnpm@10.7.1",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild", 
+      "sharp"
+    ]
   }
 }
